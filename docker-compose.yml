@@ -5,7 +5,7 @@ services:
     image: machines/filestash
     restart: always
     volumes:
-    - /filestash:/app/data/state
+    - ${WEBAPP_STORAGE_HOME}/state:/app/data/state
     environment:
     - APPLICATION_URL=
     - GDRIVE_CLIENT_ID=<gdrive_client>
